@@ -1,0 +1,73 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_about_person_description": 0,
+        "ask_by_person": 1,
+        "ask_by_person_missing": 2,
+        "ask_editor": 3,
+        "ask_issue_by_year": 4,
+        "ask_issue_by_year_missing": 5,
+        "ask_topic": 6,
+        "ask_topic_missing": 7,
+        "back": 8,
+        "confirm_generate_summary": 9,
+        "goodbye": 10,
+        "greet": 11,
+        "nlu_fallback": 12,
+        "out_of_scope": 13,
+        "restart": 14,
+        "session_start": 15,
+        "summarize_topic": 16,
+        "thank": 17
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_search_gazette": 13,
+        "action_find_editor_by_date": 14,
+        "action_find_articles_by_person": 15,
+        "action_describe_person": 16,
+        "action_summarize_topic": 17,
+        "action_generate_summary_pdf": 18,
+        "utter_ask_person": 19,
+        "utter_ask_topic": 20,
+        "utter_ask_year": 21,
+        "utter_default": 22,
+        "utter_goodbye": 23,
+        "utter_greet": 24,
+        "utter_out_of_scope": 25,
+        "utter_thank": 26
+      },
+      "entities": {
+        "date": 0,
+        "person": 1,
+        "topic": 2,
+        "year": 3
+      },
+      "slots": {
+        "year_0": 0,
+        "date_0": 1,
+        "topic_0": 2,
+        "person_0": 3
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

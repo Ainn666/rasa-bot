@@ -1,0 +1,152 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Good morning
+      - Hey there
+      - Howdy
+      - Greetings
+      - What's up?
+      - Hi there, how are you?
+      - Good afternoon
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - See you later
+      - Bye
+      - Farewell
+      - Take care
+      - Talk to you soon
+      - Have a nice day
+      - See you soon
+
+  - intent: thank
+    examples: |
+      - Thank you
+      - Thanks a lot
+      - Appreciate it
+      - Many thanks
+      - Thanks a bunch
+      - I’m grateful
+      - I appreciate it
+      - Thank you so much
+
+  - intent: out_of_scope
+    examples: |
+      - Can you tell me about something unrelated to the Gazette?
+      - What’s the weather like?
+      - I want to know about today’s news.
+      - Tell me about the current events.
+      - Do you know the latest sports scores?
+      - What’s the stock market doing today?
+      - Can you recommend a good restaurant?
+      - I need help with a travel booking.
+
+  - intent: ask_issue_by_year
+    examples: |
+      - What is the Gazette from [1936](year)
+      - Can you show me the edition from [1947](year)?
+      - I want to read the Gazette from [1948](year)
+      - Show me the publication for [1939](year)
+      - What was published in [1941](year)?
+      - Tell me what happened in [1942](year)
+      - What's in the Gazette dated [1945](year)?
+      - Do you have the issue for [1946](year)?
+      - Anything from [1936](year)?
+      - Gazette info from [1938](year), please
+      - Show me issue [01-02-1947](date)
+      - Can I see what was published on [01-07-1936](date)?
+
+  - intent: ask_editor
+    examples: |
+      - Who was the editor in [1941](year)?
+      - Can you tell me who edited the Gazette in [1939](year)?
+      - I want to know the editor from [1947](year)
+      - Who was the chief editor in [1948](year)?
+      - Was there a different editor in [1936](year)?
+      - Any info on the editor in [1942](year)?
+      - Editor in charge for [01-07-1936](date)?
+      - Who was in charge on [15-05-1947](date)?
+
+  - intent: ask_by_person
+    examples: |
+      - Show me articles by [John Smith](person)
+      - What articles did [Elizabeth](person) write?
+      - Did [Jane Doe](person) publish anything in [1947](year)?
+      - Any articles by [Michael Johnson](person) from [1941](year)?
+      - What did [James](person) publish in [1936](year)?
+      - Are there articles by [Ali Ahmad](person) in [1948](year)?
+      - Can you find writings by [Robert](person)?
+      - Was [Siti Rahmah](person) featured in any issue?
+
+  - intent: ask_topic
+    examples: |
+      - What are the articles on [education](topic)?
+      - Any articles about [health](topic)?
+      - Show me something related to [economy](topic)
+      - Tell me about the topic of [politics](topic)
+      - What did the Gazette say about [technology](topic)?
+      - I'm curious about [agriculture](topic) topics
+      - Any [history](topic) related stories?
+      - Was there any news about [environment](topic) in [1945](year)?
+
+  - intent: ask_about_person_description
+    examples: |
+      - Who is [Mr. W. S. B. Buck](person)?
+      - Tell me about [Mr. W. S. B. Buck](person)
+      - What is the role of [W. S. B. Buck](person)?
+      - What does [Mr. Buck](person) do?
+      - Can you describe [Mr. Buck](person)?
+      - Any info on [W. S. B. Buck](person)?
+      - I want to know about [Mr. Buck](person)
+      - What was [Mr. Buck](person)'s position?
+      - Describe [Mr. Buck](person) from the Gazette
+      - What was the job of [Mr. W. S. B. Buck](person)?
+
+  - intent: summarize_topic
+    examples: |
+      - Summarize articles about [health](topic)
+      - Can you summarize [politics](topic)?
+      - Give me a summary of [education](topic)
+      - What is the summary for [agriculture](topic) in [1948](year)?
+      - Summarize Gazette on [economy](topic)
+      - I want a summary for [history](topic)
+      - Please summarize [environment](topic)
+      - Summary about [transportation](topic) in [1947](year)
+
+  - intent: confirm_generate_summary
+    examples: |
+      - yes generate
+      - please generate
+      - generate it
+      - yes please
+      - go ahead and generate
+      - generate summary
+      - do it
+      - generate the pdf
+      - okay generate
+
+  - intent: ask_by_person_missing
+    examples: |
+      - Who is the author?
+      - Can you tell me the writer?
+      - I want to know who wrote this
+      - Who wrote that article?
+
+  - intent: ask_issue_by_year_missing
+    examples: |
+      - What is the Gazette?
+      - Show me the issue
+      - I want to see the Gazette
+      - Can you show me an edition?
+
+  - intent: ask_topic_missing
+    examples: |
+      - Tell me something from the Gazette
+      - Show me the article
+      - What does it say?
+      - Show me a topic

@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+  - story: Test - Greet and ask issue by year
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_issue_by_year
+      - action: action_search_gazette
+
+  - story: Test - Ask about topic
+    steps:
+      - intent: ask_topic
+      - action: action_find_articles_by_topic
+
+  - story: Test - Summarize topic and confirm
+    steps:
+      - intent: summarize_topic
+      - action: action_summarize_topic
+      - intent: confirm_generate_summary
+      - action: action_generate_summary_pdf
+
+  - story: Test - Ask editor
+    steps:
+      - intent: ask_editor
+      - action: action_find_editor_by_date
+
+  - story: Test - Ask articles by person
+    steps:
+      - intent: ask_by_person
+      - action: action_find_articles_by_person
+
+  - story: Test - Ask about person description
+    steps:
+      - intent: ask_about_person_description
+      - action: action_describe_person
+
+  - story: Test - Missing year slot
+    steps:
+      - intent: ask_issue_by_year_missing
+      - action: utter_ask_year
+
+  - story: Test - Missing topic slot
+    steps:
+      - intent: ask_topic_missing
+      - action: utter_ask_topic
+
+  - story: Test - Missing person slot
+    steps:
+      - intent: ask_by_person_missing
+      - action: utter_ask_person
+
+  - story: Test - Thank and goodbye
+    steps:
+      - intent: thank
+      - action: utter_thank
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Test - Just goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Test - Out of scope fallback
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope

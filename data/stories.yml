@@ -1,0 +1,59 @@
+version: "3.1"
+
+stories:
+  - story: Ask for missing year
+    steps:
+      - intent: ask_issue_by_year_missing
+      - action: utter_ask_year
+
+  - story: Ask for missing topic
+    steps:
+      - intent: ask_topic_missing
+      - action: utter_ask_topic
+
+  - story: Ask for missing person
+    steps:
+      - intent: ask_by_person_missing
+      - action: utter_ask_person
+
+  - story: Ask about person description
+    steps:
+      - intent: ask_about_person_description
+      - action: action_describe_person
+
+  - story: User asks topic directly (trigger summary)
+    steps:
+      - intent: ask_topic
+      - action: action_summarize_topic
+
+  - story: User asks to summarize a topic explicitly
+    steps:
+      - intent: summarize_topic
+      - action: action_summarize_topic
+
+  - story: Confirm generate summary PDF
+    steps:
+      - intent: confirm_generate_summary
+      - action: action_generate_summary_pdf
+
+  - story: Thank and goodbye
+    steps:
+      - intent: thank
+      - action: utter_thank
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Just goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Out of scope handling
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+
+  - story: Fallback response
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default

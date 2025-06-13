@@ -1,0 +1,62 @@
+version: "3.1"
+
+rules:
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to thanks
+    steps:
+      - intent: thank
+      - action: utter_thank
+
+  - rule: Handle out of scope input
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+
+  - rule: Respond to Gazette year or date request
+    steps:
+      - intent: ask_issue_by_year
+      - action: action_search_gazette
+
+  - rule: Respond to topic-based inquiry
+    steps:
+      - intent: ask_topic
+      - action: action_summarize_topic  # ✅ updated to correct action
+
+  - rule: Respond to person article search
+    steps:
+      - intent: ask_by_person
+      - action: action_find_articles_by_person
+
+  - rule: Respond to editor inquiry
+    steps:
+      - intent: ask_editor
+      - action: action_find_editor_by_date
+
+  - rule: Describe person details
+    steps:
+      - intent: ask_about_person_description
+      - action: action_describe_person
+
+  - rule: Respond to fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default
+
+  - rule: Summarize topic-based Gazette articles
+    steps:
+      - intent: summarize_topic
+      - action: action_summarize_topic
+
+  - rule: User confirms to generate full summary PDF
+    steps:
+      - intent: confirm_generate_summary
+      - action: action_generate_summary_pdf

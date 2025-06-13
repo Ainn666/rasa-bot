@@ -1,0 +1,76 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank
+  - out_of_scope
+  - nlu_fallback
+  - ask_issue_by_year
+  - ask_topic
+  - ask_by_person
+  - ask_editor
+  - ask_about_person_description
+  - ask_issue_by_year_missing
+  - ask_topic_missing
+  - ask_by_person_missing
+  - summarize_topic
+  - confirm_generate_summary
+
+entities:
+  - year
+  - date
+  - topic
+  - person
+
+slots:
+  year:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: year
+  date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+  topic:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: topic
+  person:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: person
+
+actions:
+  - action_search_gazette
+  - action_find_editor_by_date
+  - action_find_articles_by_person
+  - action_describe_person
+  - action_summarize_topic
+  - action_generate_summary_pdf
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_thank:
+    - text: "You're welcome!"
+  utter_out_of_scope:
+    - text: "Sorry, I can only answer questions about the Sarawak Gazette."
+  utter_default:
+    - text: "I'm not sure I understood that. Could you please rephrase?"
+  utter_ask_year:
+    - text: "Can you tell me which year you're referring to?"
+  utter_ask_topic:
+    - text: "What topic are you looking for in the Gazette?"
+  utter_ask_person:
+    - text: "Which author's name are you interested in?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

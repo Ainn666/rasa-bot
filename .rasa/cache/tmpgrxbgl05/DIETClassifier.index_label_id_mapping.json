@@ -1,0 +1,11 @@
+{
+  "0": "ask_about_person_description",
+  "1": "ask_by_person",
+  "2": "ask_editor",
+  "3": "ask_issue_by_year",
+  "4": "ask_topic",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "out_of_scope",
+  "8": "thank"
+}

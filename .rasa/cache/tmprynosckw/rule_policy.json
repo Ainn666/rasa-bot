@@ -1,0 +1,24 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"thank\"}}]": "utter_thank",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"thank\"}}, {\"prev_action\": {\"action_name\": \"utter_thank\"}, \"user\": {\"intent\": \"thank\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_issue_by_year\"}}]": "action_search_gazette",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_issue_by_year\"}}, {\"prev_action\": {\"action_name\": \"action_search_gazette\"}, \"user\": {\"intent\": \"ask_issue_by_year\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"out_of_scope\"}}]": "utter_out_of_scope",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"out_of_scope\"}}, {\"prev_action\": {\"action_name\": \"utter_out_of_scope\"}, \"user\": {\"intent\": \"out_of_scope\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart",
+      "predicting default action with intent back"
+    ]
+  }
+}
