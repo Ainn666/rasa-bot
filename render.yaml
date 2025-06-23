@@ -1,3 +1,6 @@
+build:
+  pythonVersion: 3.9
+
 services:
   - type: web
     name: rasa-backend
@@ -8,3 +11,4 @@ services:
     envVars:
       - key: PORT
         value: 10000
+git add render.yaml
