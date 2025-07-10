@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  rasa:
+    image: rasa/rasa:3.6.2
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./config.yml:/app/config.yml
+      - ./domain.yml:/app/domain.yml
+      - ./credentials.yml:/app/credentials.yml
+      - ./endpoints.yml:/app/endpoints.yml
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "*"
+    depends_on:
+      - action_server
+
+  action_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./actions:/app/actions
+      - ./data/cleaned_data:/app/data/cleaned_data
+    ports:
+      - "5055:5055"

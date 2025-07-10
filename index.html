@@ -282,7 +282,7 @@
       messages.appendChild(typingWrapper);
       messages.scrollTop = messages.scrollHeight;
 
-      fetch("https://sarawak-gazette-chatbot-production.up.railway.app/webhooks/rest/webhook", {
+      fetch("http://localhost:5005/webhooks/rest/webhook", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput }),

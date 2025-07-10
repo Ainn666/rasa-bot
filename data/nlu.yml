@@ -96,16 +96,16 @@ nlu:
 
   - intent: ask_about_person_description
     examples: |
+      - Who is [Mr Buck](person)?
       - Who is [Mr. W. S. B. Buck](person)?
-      - Tell me about [Mr. W. S. B. Buck](person)
-      - What is the role of [W. S. B. Buck](person)?
-      - What does [Mr. Buck](person) do?
-      - Can you describe [Mr. Buck](person)?
-      - Any info on [W. S. B. Buck](person)?
-      - I want to know about [Mr. Buck](person)
-      - What was [Mr. Buck](person)'s position?
-      - Describe [Mr. Buck](person) from the Gazette
-      - What was the job of [Mr. W. S. B. Buck](person)?
+      - Who is [Mr Tompson](person)?
+      - Tell me about [Mr Ong](person)
+      - What is the role of [Mrs Tan](person)?
+      - Do you know [Encik Karim](person)?
+      - What does [Tuan Haji Ali](person) do?
+      - Describe [Puan Aminah](person) from the Gazette
+      - Any info about [Datuk Lee](person)?
+      - What’s the job of [Siti Aisyah](person)?
 
   - intent: summarize_topic
     examples: |
@@ -150,3 +150,10 @@ nlu:
       - Show me the article
       - What does it say?
       - Show me a topic
+
+  - synonym: Mr. W. S. B. Buck
+    examples: |
+      - Mr Buck
+      - mr buck
+      - Buck
+      - Encik Buck

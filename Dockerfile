@@ -1,20 +1,13 @@
-FROM python:3.10-slim
+FROM rasa/rasa-sdk:3.6.2
+
+COPY ./actions /app/actions
 
 WORKDIR /app
 
-# Install basic dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libffi-dev \
-    libssl-dev \
-    curl \
-    git \
-    && apt-get clean
+USER root
 
-COPY . /app
+RUN pip install --no-cache-dir google-generativeai fpdf
 
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+USER 1001
 
-EXPOSE 5005
-CMD ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
+CMD ["start", "--actions", "actions"]
